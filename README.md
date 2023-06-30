@@ -59,6 +59,7 @@ Note: Replace `davarski` with your Docker registry name.
    configuration at https://kind.sigs.k8s.io/docs/user/ingress/
 
 ```
+export KUBECONFIG=output/kubeconfig.yaml
 cat <<EOF | kind create cluster --config=-
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
