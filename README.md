@@ -122,4 +122,5 @@ Hello from Python!
 ```
 Clean environment:
 ```
-kind delete cluster --name=pr-k8s```
+kind delete cluster --name=kind
+```
