@@ -1,4 +1,4 @@
-# Flask Application with Docker & Kubernetes
+## Simple python:flask app (for playgrounds & LABS)  with Docker & Kubernetes
 
 This is a simple Flask application with a Dockerfile and Kubernetes manifests to help you deploy it locally in 3 different ways.
 - Python & Flask on localhost.
@@ -29,8 +29,7 @@ python3 app/main.py
 ```
 
 5. To run the application using Docker, you need to first build the Docker image by running the following command from
-   the
-   project root directory:
+   the project root directory:
 
 ```
 docker build -t my-flask-app .
@@ -39,7 +38,10 @@ docker build -t my-flask-app .
 6. After building the Docker image, you need to tag it by running the following command:
 
 ```
+### tag image 
 docker tag my-flask-app:latest davarski/my-flask-app:latest
+
+### push the image to your personal docker registry
 docker push davarski/my-flask-app:latest
 ```   
 
@@ -87,9 +89,6 @@ kind load docker-image davarski/my-flask-app:latest --name kind
 
 Note: Replace `davarski` with your Docker registry name.
 
-NOTE: As an alternative, you can push the image to your personal docker registry.
-
-
 10. To deploy the application to the Kind cluster, apply the deployment.yaml file by running the following command:
 
 ```
@@ -104,7 +103,7 @@ kubectl get ingress
 
 ```
 
-You should be able to access the application at your `localhost`.a
+You should be able to access the application at your `localhost`:
 
 ```
 $ kubectl get ingress
@@ -116,5 +115,5 @@ Hello from Python!
 ```
 Clean environment:
 ```
-kinf delete cluster
+kinf delete cluster kind
 ```
