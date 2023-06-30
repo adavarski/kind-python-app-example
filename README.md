@@ -121,5 +121,5 @@ Hello from Python!
 ```
 Clean environment:
 ```
-kinf delete cluster kind
+kind delete cluster
 ```
