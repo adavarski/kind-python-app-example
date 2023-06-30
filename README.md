@@ -85,7 +85,7 @@ EOF
 9. (OPTIONAL) After creating the Kind cluster, you need to load the Docker image into the Kind cluster by running the following
 
 ```
-kind load docker-image davarski/my-flask-app:latest --name kind
+kind load docker-image my-flask-app:latest --name kind
 ```
 
 Note: Replace `davarski` with your Docker registry name.
