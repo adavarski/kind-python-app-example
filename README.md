@@ -89,7 +89,13 @@ kind load docker-image davarski/my-flask-app:latest --name kind
 
 Note: Replace `davarski` with your Docker registry name.
 
-10. To deploy the application to the Kind cluster, apply the deployment.yaml file by running the following command:
+
+10. Ingress NGINX
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+```
+
+11. To deploy the application to the Kind cluster, apply the deployment.yaml file by running the following command:
 
 ```
 kubectl apply -f manifest.yaml
